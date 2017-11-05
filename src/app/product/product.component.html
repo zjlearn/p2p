@@ -1,40 +1,41 @@
 <!--精选债券模块-->
 <div class="container">
   <div class="row">
-    <div class="col-lg-4">
-      <img src="/image/img012.jpg" title="精选债券" alt="精选债券">
-    </div>
+    <!--<div class="col-lg-4">-->
+      <!--<img src="/image/img012.jpg" title="精选债券" alt="精选债券">-->
+    <!--</div>-->
+
     <!--推荐的投资项目展示模块-->
-    <ul class="col-lg-8 .list-unstyled">
+    <ul class=" .list-unstyled">
       <!--从后端取数据, 并在前端进行展示-->
-      <li class="list-unstyled">
+      <li *ngFor="let product of products" class="list-unstyled">
         <div class="col-lg-2">
           <div class="item">
             <a target="_blank" href="/pro/sanb/2596.html" class="title">
-              房押贷
+              {{product.name}}
             </a>
             <!-- start 显示年终奖 “奖” 图标 --><!-- end 显示年终奖 “奖” 图标 --></div>
-          <font><a target="_blank" title="房押贷BR17100023" href="/pro/sanb/2596.html" id="title1">BR17100023</a></font>
+          <font><a target="_blank" title="房押贷BR17100023" href="/pro/sanb/2596.html" id="title1">{{product.num}}</a></font>
           <script type="text/javascript">jiequ("title1", "房押贷BR17100023")</script>
         </div>
         <div class="col-lg-2">
           <div class="item">
-            <em id="projectRate1">13.2</em><span>%</span>
+            <em id="projectRate1"> {{product.rate}} </em><span>%</span>
           </div>
           <font>历史年化收益率</font>
         </div>
         <div class="col-lg-2">
-          <div class="item">18<span>个月</span></div>
+          <div class="item"> {{product.amount }}<span>个月</span></div>
           <font>融资期限</font>
         </div>
         <div class="col-lg-2">
-          <div class="item">¥<span id="money1">101,400.00</span></div>
+          <div class="item">¥<span id="money1">{{product.amount}}</span></div>
           <font>剩余可投</font>
         </div>
         <div class="col-lg-4">
           <div class="row">
             <p class="col-lg-6">投资进度</p>
-            <span class="col-lg-6">1%</span>
+            <span class="col-lg-6">{{product.completed}}/{{product.amount}}%</span>
           </div>
           <div class="progress row">
             <div class="progress-bar progress-bar-success" role="progressbar"

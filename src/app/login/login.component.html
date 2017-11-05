@@ -1,6 +1,5 @@
-<form name="loginForm" role="form">
-  <div class="form-group">
-      <label for=""></label>
-    <input type="tel" id=" ">
-  </div>
+<form [formGroup] = "loginFormModel" (onSubmit) = "onSubmit()">
+  <div>用户名： <input type="text" formControlName="userName"></div>
+  <div>密码： <input type="password" formControlName="password"></div>
+  <div>验证码：<input type="text" formControlName="verifyCode"></div>
 </form>
