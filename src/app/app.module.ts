@@ -10,6 +10,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import {ProductService} from "./shared/productService";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -25,9 +27,10 @@ import { RegisterComponent } from './register/register.component';
     BrowserModule,
     HttpModule,
     FormsModule,
-    ReactiveFormsModule  // 用于响应式表单
+    ReactiveFormsModule,  // 用于响应式表单
+    AppRoutingModule   // 用于主模块中的路由
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
