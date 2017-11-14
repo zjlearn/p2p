@@ -13,6 +13,8 @@ import { RegisterComponent } from './register/register.component';
 import {ProductService} from './shared/productService';
 import {AppRoutingModule} from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { InvestComponent } from './invest/invest.component';
+import { LoanComponent } from './loan/loan.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HomeComponent } from './home/home.component';
     ProductComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    InvestComponent,
+    LoanComponent
   ],
   imports: [
     BrowserModule,
