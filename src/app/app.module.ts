@@ -15,6 +15,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { InvestComponent } from './invest/invest.component';
 import { LoanComponent } from './loan/loan.component';
+import {MaterialModule} from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { LoanComponent } from './loan/loan.component';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,  // 用于响应式表单
+    MaterialModule,
     AppRoutingModule   // 用于主模块中的路由
   ],
   providers: [ProductService],
