@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -7,25 +7,20 @@ import {FormControl, FormGroup} from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  formModel: FormGroup;
+  isLinear = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
 
-  constructor() {
-    this.formModel = new FormGroup({
-      'userName': new FormControl(),
-      'mobile': new FormControl(),
-      'passwordsGroup': new FormGroup({
-        'password': new FormControl(),
-        'pconfirm': new FormControl()
-      })
-    });
+  constructor(private _formBuilder: FormBuilder) {
   }
-
-  onSubmit() {
-    console.log(this.formModel.value);
-  }
-
 
   ngOnInit() {
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
   }
 
 }
