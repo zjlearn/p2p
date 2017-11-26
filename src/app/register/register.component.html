@@ -1,34 +1,52 @@
-<button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
+<div>
+  <mat-card>
 
-<mat-horizontal-stepper [linear]="isLinear">
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-    </div>
-  </mat-step>
-</mat-horizontal-stepper>
+
+    <mat-card-content>
+      <mat-horizontal-stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>填写名字</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="请输入手机号" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="请输入验证码" formControlName="firstCtrl" required>
+            </mat-form-field><mat-form-field>
+              <input matInput placeholder="请输入密码" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="请输入确认密码" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="请输入邀请人手机号" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>下一步</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>开户</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="Address" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>返回</button>
+              <button mat-button matStepperNext>下一步</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>注册成功</ng-template>
+         恭喜你注册成功！
+          <div>
+            <button mat-button matStepperPrevious>返回</button>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </mat-card-content>
+  </mat-card>
+</div>
+

@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
   MatButtonModule, MatToolbarModule, MatIconModule,
-  MatCardModule, MatSidenavModule, MatInputModule, MatTooltipModule, MatOptionModule, MatSelectModule
+  MatCardModule, MatSidenavModule, MatInputModule, MatTooltipModule, MatOptionModule, MatSelectModule, MatStepperModule,
+  MatListModule
 } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -18,7 +19,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatFormFieldModule,
     MatTooltipModule,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    MatStepperModule,
+    MatListModule
   ],
   exports: [
     MatButtonModule,
@@ -30,7 +33,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatFormFieldModule,
     MatTooltipModule,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    MatStepperModule,
+    MatListModule
   ],
   declarations: []
 })
