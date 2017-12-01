@@ -1,55 +1,49 @@
 <!--精选债券模块-->
 
-<div class="container">
-  <mat-card>
-    <mat-card-header>精选投资</mat-card-header>
+<div class="container" id="productList">
+  <mat-card class="productList">
+    <mat-card-header>
+      <mat-card-title>精选投资</mat-card-title>
+    </mat-card-header>
     <mat-card-content>
-      <mat-list class="list-group">
+      <mat-list>
         <mat-list-item *ngFor="let product of products">
-          <div class="col-lg-2">
-            <div class="item">
-              <a target="_blank" href="/pro/sanb/2596.html" class="title">
-                {{product.name}}
-              </a>
-              <!-- start 显示年终奖 “奖” 图标 --><!-- end 显示年终奖 “奖” 图标 --></div>
-            <font><a target="_blank" title="房押贷BR17100023" href="/pro/sanb/2596.html"
-                     id="title1">{{product.num}}</a></font>
-            <script type="text/javascript">jiequ("title1", "房押贷BR17100023")</script>
-          </div>
-          <div class="col-lg-2">
-            <div class="item">
+          <div class="row" class="productItem">
+            <div class="col-lg-2">
+              <div class="item">
+                <a target="_blank" href="/pro/sanb/2596.html" class="title">
+                  {{product.name}}
+                </a>
+                <!-- start 显示年终奖 “奖” 图标 --><!-- end 显示年终奖 “奖” 图标 --></div>
+              <a target="_blank" title="房押贷BR17100023" href="/pro/sanb/2596.html"
+                 id="title1">{{product.num}}</a>
+            </div>
+            <div class="col-lg-2">
               <em id="projectRate1"> {{product.rate}} </em><span>%</span>
+              <p>历史年化收益率</p>
             </div>
-            <font>历史年化收益率</font>
-          </div>
-          <div class="col-lg-2">
-            <div class="item"> {{product.amount }}<span>个月</span></div>
-            <font>融资期限</font>
-          </div>
-          <div class="col-lg-2">
-            <div class="item">¥<span id="money1">{{product.amount}}</span></div>
-            <font>剩余可投</font>
-          </div>
-          <div class="col-lg-4">
-            <div class="row">
-              <p class="col-lg-6">投资进度</p>
-              <span class="col-lg-6">{{product.completed}}/{{product.amount}}%</span>
+            <div class="col-lg-2">
+              <div class="item"> {{product.amount }}<span>个月</span></div>
+              <p>融资期限</p>
             </div>
-            <div class="progress row">
-              <div class="progress-bar progress-bar-success" role="progressbar"
-                   aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                   style="width: 50%;">
-                <span class="sr-only" style="width:1%">90%完成</span>
+            <div class="col-lg-2">
+              <div class="item">¥<span id="money1">{{product.amount}}</span></div>
+              <p>剩余可投</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="row">
+                <p class="col-lg-6">投资进度</p>
+                <span class="col-lg-6">{{product.completed}}/{{product.amount}}%</span>
+                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+              </div>
+              <div class="row">
+                <button mat-button href="/pro/sanb/2596.html" target="_blank">立即投资</button>
               </div>
             </div>
-            <div class="row">
-              <a type="button" class="btn btn-default" href="/pro/sanb/2596.html" target="_blank">立即投资</a>
-            </div>
           </div>
-
         </mat-list-item>
       </mat-list>
-    </mat-card-content>
-  </mat-card>
+      <!--</mat-card-content>-->
+      <!--</mat-card>-->
 </div>
 

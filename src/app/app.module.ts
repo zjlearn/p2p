@@ -17,6 +17,7 @@ import {InvestComponent} from './invest/invest.component';
 import {LoanComponent} from './loan/loan.component';
 import {MaterialModule} from './material/material.module';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {AboutUsModule} from "./about-us/about-us.module";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     HttpModule,
     FormsModule,
     ReactiveFormsModule,  // 用于响应式表单
-    AppRoutingModule   // 用于主模块中的路由
+    AppRoutingModule,   // 用于主模块中的路由
+    AboutUsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

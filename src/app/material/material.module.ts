@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {
   MatButtonModule, MatToolbarModule, MatIconModule,
   MatCardModule, MatSidenavModule, MatInputModule, MatTooltipModule, MatOptionModule, MatSelectModule, MatStepperModule,
-  MatListModule
+  MatListModule, MatProgressBarModule
 } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -21,7 +21,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatOptionModule,
     MatSelectModule,
     MatStepperModule,
-    MatListModule
+    MatListModule,
+    MatProgressBarModule
+
   ],
   exports: [
     MatButtonModule,
@@ -35,7 +37,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatOptionModule,
     MatSelectModule,
     MatStepperModule,
-    MatListModule
+    MatListModule,
+    MatProgressBarModule
   ],
   declarations: []
 })

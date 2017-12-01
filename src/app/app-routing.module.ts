@@ -3,8 +3,9 @@ import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {NgModule} from '@angular/core';
 import {HomeComponent} from './home/home.component';
-import {InvestComponent} from "./invest/invest.component";
-import {LoanComponent} from "./loan/loan.component";
+import {InvestComponent} from './invest/invest.component';
+import {LoanComponent} from './loan/loan.component';
+import {AboutusComponent} from './about-us/aboutus/aboutus.component';
 
 
 // 组件之间的路由关系
@@ -14,8 +15,9 @@ export const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'invest', component: InvestComponent},
   {path: 'loan', component: LoanComponent},
+  {path: 'aboutUs', component: AboutusComponent},
   {path: '',  redirectTo: '/home', pathMatch: 'full'}
-  ]
+  ];
 
 
 @NgModule({
