@@ -1,78 +1,60 @@
+<!--放置选择-->
 <div class="container">
+  <mat-card class="productFilter">
+    <mat-card-header>
+      <mat-card-title>项目筛选</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="p2p-filter">
+      <h4 class="title">起投金额</h4>
+      <ul></ul>
+    </mat-card-content>
+  </mat-card>
 
-</div>
-<!--精选债券模块-->
-<div class="container">
-  <div class="row">
-    <!--<div class="col-lg-4">-->
-    <!--<img src="/image/img012.jpg" title="精选债券" alt="精选债券">-->
-    <!--</div>-->
-
-    <!--推荐的投资项目展示模块-->
-    <ul class=" .list-unstyled">
-      <!--从后端取数据, 并在前端进行展示-->
-      <li *ngFor="let product of products" class="list-unstyled">
-        <div class="col-lg-2">
-          <div class="item">
-            <a target="_blank" href="/pro/sanb/2596.html" class="title">
-              {{product.name}}
-            </a>
-            <!-- start 显示年终奖 “奖” 图标 --><!-- end 显示年终奖 “奖” 图标 --></div>
-          <font><a target="_blank" title="房押贷BR17100023" href="/pro/sanb/2596.html" id="title1">{{product.num}}</a></font>
-          <script type="text/javascript">jiequ("title1", "房押贷BR17100023")</script>
-        </div>
-        <div class="col-lg-2">
-          <div class="item">
-            <em id="projectRate1"> {{product.rate}} </em><span>%</span>
-          </div>
-          <font>历史年化收益率</font>
-        </div>
-        <div class="col-lg-2">
-          <div class="item"> {{product.amount }}<span>个月</span></div>
-          <font>融资期限</font>
-        </div>
-        <div class="col-lg-2">
-          <div class="item">¥<span id="money1">{{product.amount}}</span></div>
-          <font>剩余可投</font>
-        </div>
-        <div class="col-lg-4">
-          <div class="row">
-            <p class="col-lg-6">投资进度</p>
-            <span class="col-lg-6">{{product.completed}}/{{product.amount}}%</span>
-          </div>
-          <div class="progress row">
-            <div class="progress-bar progress-bar-success" role="progressbar"
-                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                 style="width: 50%;">
-              <span class="sr-only" style="width:1%">90%完成</span>
+  <!--精选债券模块-->
+  <div class="container">
+    <div class="row">
+      <!--推荐的投资项目展示模块-->
+      <ul class="productList">
+        <!--从后端取数据, 并在前端进行展示-->
+        <li *ngFor="let product of products" class="list-unstyled row productItem">
+          <div class="col-lg-2">
+            <div class="item">
+              <a target="_blank" href="/pro/sanb/2596.html" class="title">{{product.name}}</a>
             </div>
+            <a target="_blank" title="房押贷BR17100023" href="/pro/sanb/2596.html" id="title1">{{product.num}}</a>
           </div>
-          <div class="row">
-            <a type="button" class="btn btn-default" href="/pro/sanb/2596.html" target="_blank">立即投资</a>
+          <div class="col-lg-2">
+            <div class="item">
+              <em id="projectRate1"> {{product.rate}} </em><span>%</span>
+            </div>
+            <p>历史年化收益率</p>
           </div>
-        </div>
-      </li>
-    </ul>
+          <div class="col-lg-2">
+            <div class="item"> {{product.amount }}<span>个月</span></div>
+            <p>融资期限</p>
+          </div>
+          <div class="col-lg-2">
+            <div class="item">¥<span id="money1">{{product.amount}}</span></div>
+            <p>剩余可投</p>
+          </div>
+          <div class="col-lg-2">
+            <div class="row">
+              <p class="col-lg-6">投资进度</p>
+              <span class="col-lg-6">{{product.completed}}/{{product.amount}}%</span>
+            </div>
+            <mat-progress-bar class="row" mode="determinate" value="40"></mat-progress-bar>
+          </div>
+          <button mat-button class="col-lg-2 ">立即投资</button>
+        </li>
+      </ul>
+    </div>
+    <mat-paginator [length]="100"
+                   [pageSize]="10"
+                   [pageSizeOptions]="[5, 10, 25, 100]" class="paginator">
+    </mat-paginator>
   </div>
+
+
 </div>
 
-<!--实现分页逻辑的模块-->
-<nav aria-label="Page navigation">
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+

@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {
   MatButtonModule, MatToolbarModule, MatIconModule,
   MatCardModule, MatSidenavModule, MatInputModule, MatTooltipModule, MatOptionModule, MatSelectModule, MatStepperModule,
-  MatListModule, MatProgressBarModule
+  MatListModule, MatProgressBarModule, MatPaginatorModule
 } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -22,7 +22,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSelectModule,
     MatStepperModule,
     MatListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatPaginatorModule
 
   ],
   exports: [
@@ -38,7 +39,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSelectModule,
     MatStepperModule,
     MatListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatPaginatorModule
   ],
   declarations: []
 })

@@ -16,8 +16,8 @@ import {HomeComponent} from './home/home.component';
 import {InvestComponent} from './invest/invest.component';
 import {LoanComponent} from './loan/loan.component';
 import {MaterialModule} from './material/material.module';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {AboutUsModule} from "./about-us/about-us.module";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AboutUsModule} from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
